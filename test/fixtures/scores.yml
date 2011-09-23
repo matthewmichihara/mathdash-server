@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  player: MyString
+  score: 1
+  timestamp: 2011-09-21 00:53:19
+
+two:
+  player: MyString
+  score: 1
+  timestamp: 2011-09-21 00:53:19

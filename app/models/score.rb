@@ -4,7 +4,7 @@ class LegitValidator < ActiveModel::Validator
 	def validate(record)
 		secret_salt = "hello world"
 		s = record.player + record.score.to_s + record.ts + secret_salt
-		digest = Digest::SHA1.hexdigest(s)
+		digest = Digest::SHA512.hexdigest(s)
 
 		if (record.digest != digest)
 			record.errors[:base] << "Score submission is invalid."

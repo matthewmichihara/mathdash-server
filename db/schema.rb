@@ -10,12 +10,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110924235138) do
+ActiveRecord::Schema.define(:version => 20110925091926) do
 
   create_table "scores", :force => true do |t|
     t.string   "player"
     t.integer  "score"
-    t.integer  "ts"
+    t.string   "ts"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

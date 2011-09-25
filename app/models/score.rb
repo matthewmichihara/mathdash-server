@@ -18,7 +18,7 @@ class Score < ActiveRecord::Base
 	validates :score, :presence => true, :numericality => true
 	validates :ts, :presence => true 
 
-	validates_with LegitValidator
+	#validates_with LegitValidator
 end
 
 

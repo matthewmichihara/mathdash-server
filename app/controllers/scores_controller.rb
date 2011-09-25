@@ -2,7 +2,7 @@ class ScoresController < ApplicationController
   # GET /scores
   # GET /scores.json
   def index
-    @scores = Score.all
+    @scores = Score.order("score DESC").limit(20)
 
     respond_to do |format|
       format.html # index.html.erb

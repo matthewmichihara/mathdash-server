@@ -10,14 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110921075319) do
+ActiveRecord::Schema.define(:version => 20110924235138) do
 
   create_table "scores", :force => true do |t|
     t.string   "player"
     t.integer  "score"
-    t.datetime "timestamp"
+    t.integer  "ts"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "scores", ["player", "score", "ts"], :name => "by_player_score_ts", :unique => true
 
 end

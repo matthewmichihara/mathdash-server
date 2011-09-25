@@ -41,6 +41,7 @@ class ScoresController < ApplicationController
   # POST /scores.json
   def create
     @score = Score.new(params[:score])
+	@score.digest = params[:digest]
 
     respond_to do |format|
       if @score.save

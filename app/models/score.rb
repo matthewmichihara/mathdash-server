@@ -2,7 +2,7 @@ require 'digest/sha1'
 
 class LegitValidator < ActiveModel::Validator
 	def validate(record)
-		secret_salt = "hello world"
+		secret_salt = ENV["SERVER_SALT"]
 		s = record.player + record.score.to_s + record.ts + secret_salt
 		digest = Digest::SHA256.hexdigest(s)
 

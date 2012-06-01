@@ -1,0 +1,11 @@
+%h1 High Scores
+%table
+  %tr
+    %th Player
+    %th Score
+    %th Timestamp
+  - @scores.each do |score|
+    %tr
+      %td= score.player
+      %td= score.score
+      %td= score.ts
